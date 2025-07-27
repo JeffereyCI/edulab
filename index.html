@@ -2,20 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
-    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"></head>
-<body>
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover" style="background-image: url('./assets/img/hero-bg.jpg');">
-        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLab - Homepage</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/index-styles.css">
+    </head>
+<body class="font-sans antialiased">
 
-        <div class="relative z-10 text-center text-white px-6">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Belajar <span id="typed-text" class="text-blue-400"></span>
-            </h2>
-            <p class="text-lg mb-6 max-w-xl mx-auto">Platform pembelajaran online terbaik untuk masa depan Anda.</p>
-            <a href="#courses" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 text-white rounded-lg font-semibold transition">Lihat Kursus</a>
+    <section id="hero-section" class="min-h-screen flex flex-col justify-center items-center text-white relative overflow-hidden parallax">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+
+        <div class="z-10 text-center px-4">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Welcome to EduLab</h1>
+            <p id="tagline" class="text-xl md:text-3xl mb-8 font-light"></p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+                <div class="p-6 bg-white bg-opacity-20 rounded-lg shadow-lg">
+                    <p class="text-4xl font-bold mb-2" id="users-count">0</p>
+                    <p class="text-lg">Pengguna Aktif</p>
+                </div>
+                <div class="p-6 bg-white bg-opacity-20 rounded-lg shadow-lg">
+                    <p class="text-4xl font-bold mb-2" id="projects-count">0</p>
+                    <p class="text-lg">Proyek Selesai</p>
+                </div>
+                <div class="p-6 bg-white bg-opacity-20 rounded-lg shadow-lg">
+                    <p class="text-4xl font-bold mb-2" id="success-rate">0%</p>
+                    <p class="text-lg">Tingkat Keberhasilan</p>
+                </div>
+            </div>
+
+            <button id="hero-cta-scroll" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">Pelajari Lebih Lanjut</button>
         </div>
     </section>
+
+    <section id="content-section" class="bg-gray-100 py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Mengapa Memilih EduLab?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-blue-500 text-5xl mb-6 text-center">💡</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Pembelajaran Interaktif</h3>
+                    <p class="text-gray-600 text-center">Nikmati modul pembelajaran yang dirancang untuk keterlibatan maksimal, dengan kuis interaktif dan proyek nyata.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-green-500 text-5xl mb-6 text-center">👨‍🏫</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Instruktur Berpengalaman</h3>
+                    <p class="text-gray-600 text-center">Belajar dari para ahli di bidangnya yang siap membimbing Anda mencapai kesuksesan.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-purple-500 text-5xl mb-6 text-center">📈</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Jalur Karir Jelas</h3>
+                    <p class="text-gray-600 text-center">Dapatkan keterampilan yang relevan dengan industri dan terhubung dengan peluang karir.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-red-500 text-5xl mb-6 text-center">💻</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Akses Fleksibel</h3>
+                    <p class="text-gray-600 text-center">Belajar kapan saja, di mana saja, dengan perangkat apa saja. Kurikulum kami menyesuaikan jadwal Anda.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-yellow-500 text-5xl mb-6 text-center">🤝</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Komunitas Pendukung</h3>
+                    <p class="text-gray-600 text-center">Bergabunglah dengan komunitas pembelajar yang dinamis untuk berkolaborasi dan berbagi.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-teal-500 text-5xl mb-6 text-center">🏆</div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Sertifikasi Bergengsi</h3>
+                    <p class="text-gray-600 text-center">Selesaikan kursus dan dapatkan sertifikat yang diakui untuk meningkatkan profil profesional Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="final-cta-section" class="bg-blue-700 py-20 px-4 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Siap Mengubah Masa Depan Anda?</h2>
+            <p class="text-xl md:text-2xl mb-10">Bergabunglah dengan ribuan siswa yang telah berhasil meraih impian mereka bersama EduLab.</p>
+            <a href="#" class="bg-white text-blue-700 hover:bg-gray-200 font-bold py-4 px-12 rounded-full text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">Daftar Sekarang Juga!</a>
+        </div>
+    </section>
+
+    <script src="./assets/js/index-scripts.js"></script>
 </body>
 </html>
