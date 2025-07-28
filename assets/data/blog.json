@@ -1,0 +1,59 @@
+{
+  "hero_blog": {
+    "title": "Wawasan Terbaru EduLab",
+    "subtitle": "Temukan artikel, berita, dan tips dari para ahli di dunia pendidikan dan teknologi."
+  },
+  "categories": [
+    { "id": "all", "name": "Semua Artikel" },
+    { "id": "technology", "name": "Teknologi Pembelajaran" },
+    { "id": "career", "name": "Tips Karir" },
+    { "id": "edutech-news", "name": "Berita Edutech" },
+    { "id": "student-success", "name": "Kisah Sukses Siswa" }
+  ],
+  "articles": [
+    {
+      "id": "ai-in-education",
+      "category": "technology",
+      "title": "Revolusi AI dalam Pendidikan: Tren dan Tantangan",
+      "author": "Dr. Fitriani Dewi",
+      "date": "2025-07-20",
+      "thumbnail": "https://via.placeholder.com/400x250/663399/FFFFFF?text=AI+in+Edu",
+      "content_preview": "Kecerdasan Buatan (AI) mengubah lanskap pendidikan. Pelajari bagaimana AI membentuk masa depan pembelajaran dan menghadapi tantangan yang ada.",
+      "content_full": "Kecerdasan Buatan (AI) telah menjadi pendorong utama inovasi di berbagai sektor, termasuk pendidikan. Dengan kemampuannya menganalisis data besar, mempersonalisasi pengalaman belajar, dan mengotomatisasi tugas-tugas administratif, AI berpotensi merevolusi cara kita mengajar dan belajar. Namun, adopsi AI dalam pendidikan juga membawa serangkaian tantangan, mulai dari etika penggunaan data hingga kesiapan infrastruktur dan pelatihan tenaga pengajar. Artikel ini akan mengeksplorasi tren terkini dalam pemanfaatan AI di ruang kelas, seperti tutor virtual, sistem penilaian otomatis, dan analisis prediktif untuk identifikasi kebutuhan siswa. Kami juga akan membahas tantangan utama yang harus diatasi untuk memastikan integrasi AI yang etis dan efektif, serta bagaimana EduLab mempersiapkan siswa dan institusi untuk masa depan yang digerakkan AI.",
+      "tags": ["AI", "edutech", "inovasi", "tren"]
+    },
+    {
+      "id": "career-growth-tips",
+      "category": "career",
+      "title": "5 Keterampilan Esensial untuk Karir Sukses di Era Digital",
+      "author": "Budi Santoso",
+      "date": "2025-07-18",
+      "thumbnail": "https://via.placeholder.com/400x250/008080/FFFFFF?text=Career+Tips",
+      "content_preview": "Di dunia yang terus berubah, keterampilan adaptif menjadi kunci. Temukan 5 keterampilan yang paling dicari oleh perusahaan digital.",
+      "content_full": "Era digital menuntut individu untuk terus mengembangkan diri dan beradaptasi dengan cepat. Lebih dari sekadar hard skill, perusahaan kini mencari kandidat dengan kombinasi keterampilan teknis dan soft skill yang kuat. Artikel ini mengidentifikasi lima keterampilan esensial yang akan membantu Anda unggul di pasar kerja digital: pemikiran kritis dan pemecahan masalah, kreativitas dan inovasi, kolaborasi dan komunikasi, literasi data, serta fleksibilitas dan adaptasi. Kami juga akan memberikan tips praktis tentang bagaimana Anda dapat mengembangkan dan menunjukkan keterampilan-keterampilan ini, serta bagaimana program EduLab dirancang untuk membekali Anda dengan kompetensi yang relevan.",
+      "tags": ["karir", "keterampilan", "digital", "sukses"]
+    },
+    {
+      "id": "virtual-classroom-future",
+      "category": "edutech-news",
+      "title": "Kelas Virtual: Masa Depan Pembelajaran Jarak Jauh?",
+      "author": "Siti Aminah",
+      "date": "2025-07-15",
+      "thumbnail": "https://via.placeholder.com/400x250/FFD700/000000?text=Virtual+Class",
+      "content_preview": "Pandemi mempercepat adopsi kelas virtual. Apa yang bisa kita harapkan dari evolusi ruang kelas digital ini?",
+      "content_full": "Transformasi digital di sektor pendidikan telah membawa kelas virtual ke garis depan. Dari sekadar video conference, kelas virtual kini berkembang menjadi lingkungan belajar yang imersif dan interaktif. Artikel ini membahas evolusi kelas virtual, dari alat darurat menjadi fondasi masa depan pembelajaran jarak jauh. Kami akan menyoroti teknologi-teknologi baru yang memperkaya pengalaman kelas virtual, seperti papan tulis interaktif digital, ruang kerja kelompok virtual, dan fitur real-time feedback. EduLab percaya bahwa kelas virtual bukan hanya tentang transfer informasi, tetapi juga tentang menciptakan pengalaman belajar yang menarik dan efektif, serta membangun koneksi antara siswa dan instruktur di mana pun mereka berada.",
+      "tags": ["kelas virtual", "online learning", "edutech", "inovasi"]
+    },
+    {
+      "id": "alumni-success-story",
+      "category": "student-success",
+      "title": "Dari Nol Hingga Ahli: Kisah Sukses Alumni EduLab",
+      "author": "Tim EduLab",
+      "date": "2025-07-10",
+      "thumbnail": "https://via.placeholder.com/400x250/9400D3/FFFFFF?text=Alumni+Success",
+      "content_preview": "Ikuti perjalanan inspiratif salah satu alumni kami yang berhasil bertransformasi karir melalui program EduLab.",
+      "content_full": "Kisah sukses alumni adalah bukti nyata dari komitmen EduLab. Dalam artikel ini, kami menyoroti perjalanan inspiratif Sarah, seorang lulusan non-teknis yang berhasil bertransformasi menjadi seorang Data Scientist dalam waktu kurang dari setahun setelah mengikuti bootcamp EduLab. Dari tantangan awal hingga penempatan kerja impiannya, kisah Sarah adalah bukti bahwa dengan dedikasi dan bimbingan yang tepat, siapa pun bisa mencapai tujuan karir mereka. Kami akan membahas program yang Sarah ikuti, tantangan yang ia hadapi, dan bagaimana dukungan dari instruktur serta komunitas EduLab membantunya meraih kesuksesan.",
+      "tags": ["kisah sukses", "alumni", "transformasi karir", "inspirasi"]
+    }
+  ]
+}
