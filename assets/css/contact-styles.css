@@ -1,0 +1,218 @@
+/* assets/css/contact-styles.css */
+
+/* Contact Form */
+#contact-form input,
+#contact-form textarea {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.error-message {
+    font-size: 0.875rem; /* text-sm */
+    color: #dc2626; /* red-600 */
+    margin-top: 0.25rem; /* mt-1 */
+    display: block; /* Ensures it takes full width */
+}
+
+/* Main Contact Info Grid (Reverted to a simpler grid layout) */
+.contact-info-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info-card .icon-wrapper {
+    background-color: #e0f2fe; /* blue-100 */
+    border-radius: 50%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #2563eb; /* blue-600 */
+}
+
+.contact-info-card .icon-wrapper svg {
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+}
+
+.contact-info-card h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 700; /* font-bold */
+    color: #1f2937; /* gray-900 */
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-card p {
+    font-size: 0.95rem; /* text-base */
+    color: #4b5563; /* gray-700 */
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-card .social-link-wrapper {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-info-card .social-link-wrapper a {
+    color: #4b5563; /* gray-700 */
+    transition: color 0.2s ease;
+}
+
+.contact-info-card .social-link-wrapper a:hover {
+    color: #2563eb; /* blue-600 */
+}
+
+/* Google Map Styles */
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 400px; /* Consistent height for the map */
+    width: 100%; /* Full width */
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
+}
+
+#gmap_canvas {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.office-info-card { /* Digunakan juga untuk kartu lokasi kantor di bawah peta */
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.office-info-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.office-info-card p {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.office-info-card a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.office-info-card a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* FAQ Accordion */
+.faq-item {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    cursor: pointer;
+    background-color: #f9fafb;
+    border: none;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+    background-color: #f3f4f6;
+}
+
+.faq-question .arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+
+.faq-answer.open {
+    max-height: 500px;
+    padding-bottom: 1rem;
+}
+
+/* Live Chat Simulation */
+#chat-button svg {
+    /* W-8 H-8, color set by Tailwind */
+}
+
+#chat-window {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.chat-message-user {
+    text-align: right;
+}
+
+.chat-bubble {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+}
+
+.chat-bubble.user {
+    background-color: #3b82f6;
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.chat-bubble.bot {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    border-bottom-left-radius: 0;
+    text-align: left;
+}
