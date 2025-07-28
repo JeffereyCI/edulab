@@ -11,6 +11,12 @@
 - **Portofolio:** Showcase proyek, filter kategori, modal detail proyek, galeri gambar, dan testimoni klien.
 - **Kontak:** Form kontak dengan validasi, info kantor, FAQ interaktif, dan chatbot EduBot.
 
+## Galeri EduLab
+
+|            Hero Image                 |
+|:-------------------------------------:|
+| ![Landing Page Image](assets/images/landing-page.png) |
+
 ## 🗂️ Struktur Direktori
 
 ```
