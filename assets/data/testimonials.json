@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Ahmad W.",
+        "title": "Web Developer",
+        "avatar": "https://via.placeholder.com/80/007bff/ffffff?text=AW",
+        "quote": "EduLab mengubah cara saya belajar! Materi interaktif dan instruktur yang suportif membuat prosesnya sangat menyenangkan dan efektif.",
+        "rating": 5.0
+    },
+    {
+        "id": 2,
+        "name": "Siti K.",
+        "title": "Data Scientist",
+        "avatar": "https://via.placeholder.com/80/28a745/ffffff?text=SK",
+        "quote": "Saya tidak menyangka bisa belajar sebanyak ini dalam waktu singkat. Kurikulumnya sangat relevan dengan kebutuhan industri saat ini!",
+        "rating": 4.5
+    },
+    {
+        "id": 3,
+        "name": "Budi F.",
+        "title": "UI/UX Designer",
+        "avatar": "https://via.placeholder.com/80/6f42c1/ffffff?text=BF",
+        "quote": "Komunitas EduLab sangat mendukung! Saya menemukan teman belajar dan mentor yang luar biasa di sini.",
+        "rating": 5.0
+    },
+    {
+        "id": 4,
+        "name": "Ani Anggraini",
+        "title": "Project Manager",
+        "avatar": "https://via.placeholder.com/80/FFA500/FFFFFF?text=AA",
+        "quote": "Sertifikasi dari EduLab benar-benar membuka pintu karir baru bagi saya. Sangat direkomendasikan untuk siapa saja yang serius berkembang.",
+        "rating": 4.8
+    },
+    {
+        "id": 5,
+        "name": "Dian P.",
+        "title": "Digital Marketer",
+        "avatar": "https://via.placeholder.com/80/FF6347/FFFFFF?text=DP",
+        "quote": "Fleksibilitas belajar di EduLab memungkinkan saya untuk tetap bekerja sambil meningkatkan skill. Hasilnya luar biasa!",
+        "rating": 4.7
+    }
+]

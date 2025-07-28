@@ -1,5 +1,3 @@
-/* assets/css/index-styles.css */
-
 /* Hero Section Parallax */
 .parallax {
     background-image: url('/assets/images/hero.jpg');
@@ -9,21 +7,93 @@
     background-size: cover;
 }
 
-/* Features/Services Section Styles */
-.service-card:hover .feature-icon {
-    transform: scale(1.1);
+/* Base fade-in animations */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.feature-details {
+.animate-fade-in-up {
+    animation: fadeInFromBottom 0.8s ease-out forwards;
+}
+
+.delay-200 { animation-delay: 0.2s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Features/Services Section Styles */
+.feature-highlight-card {
+    border: 1px solid #e2e8f0;
+}
+
+.feature-highlight-card.group:hover {
+    transform: translateY(-8px); /* Angkat lebih tinggi */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.1); /* Bayangan lebih kuat */
+}
+
+.feature-icon-lg {
+    transition: transform 0.4s ease-out, background-color 0.4s ease-out; /* Transisi ikon lebih halus */
+}
+
+.feature-highlight-card.group:hover .feature-icon-lg {
+    transform: scale(1.15) rotate(5deg); /* Membesar dan sedikit berputar */
+}
+
+/* Progressive Disclosure */
+.feature-details-expandable {
     overflow: hidden;
     transition: height 0.5s ease-out, opacity 0.5s ease-out;
     height: 0;
     opacity: 0;
 }
 
-.feature-details.expanded {
+.feature-details-expandable.expanded {
     height: auto;
     opacity: 1;
+}
+
+/* Small feature cards */
+.feature-card-small.group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feature-card-small.group:hover .text-5xl { /* Icon in small cards */
+    transform: scale(1.15) rotate(-3deg);
+}
+
+/* Animasi Blob Background */
+@keyframes blob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite cubic-bezier(0.6, 0.01, 0.3, 0.9);
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
 
 /* Testimonials/Reviews Section Styles */
@@ -33,25 +103,24 @@
 }
 
 .testimonial-card {
-    flex-shrink: 0; /* Penting agar kartu tidak menyusut */
-    width: 100%; /* Setiap kartu mengambil seluruh lebar kontainer */
+    flex-shrink: 0;
+    width: 100%;
 }
 
 .star-rating {
-    position: relative; /* Untuk posisi absolut detail rating */
-    display: inline-flex; /* Agar span bintang berjajar */
+    position: relative;
+    display: inline-flex;
 }
 
 .star-rating .star {
-    font-size: 2rem; /* Ukuran bintang */
+    font-size: 2rem;
     line-height: 1;
-    color: #fbd38d; /* Warna kuning default */
+    color: #FFD700; /* Emas */
 }
 
-/* Star rating detail on hover */
 .star-rating .rating-detail {
     position: absolute;
-    bottom: calc(100% + 5px); /* Di atas bintang dengan sedikit jarak */
+    bottom: calc(100% + 5px);
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.75);
@@ -62,7 +131,7 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    pointer-events: none; /* Agar tidak menghalangi klik di bawahnya */
+    pointer-events: none;
     z-index: 10;
 }
 
@@ -71,18 +140,23 @@
     visibility: visible;
 }
 
-/* Styling for inactive/partial stars */
 .star.inactive {
-    color: #cbd5e0; /* Warna abu-abu untuk bintang tidak aktif */
+    color: #cbd5e0;
 }
 
-/* Untuk simulasi setengah bintang, bisa pakai masking atau ikon yang berbeda */
-/* Contoh sederhana, bintang ke-5 bisa diatur gray jika rating 4.5 */
 .star-rating[data-rating="4.5"] .star:nth-child(5) {
-    color: #cbd5e0; /* Misalnya, bintang ke-5 menjadi abu-abu untuk 4.5 */
+    color: #cbd5e0;
 }
 
-/* Carousel navigation dots */
 .carousel-dot.active {
-    background-color: #3b82f6; /* Warna biru untuk dot aktif */
+    background-color: #3b82f6;
 }
+
+/* Utility for hover background color that's not directly in Tailwind's hover:bg-* */
+.group-hover\:bg-blue-hover { background-color: #2563eb; }
+.group-hover\:bg-green-hover { background-color: #047857; }
+.group-hover\:bg-purple-hover { background-color: #6d28d9; }
+.group-hover\:bg-red-hover { background-color: #dc2626; }
+.group-hover\:bg-yellow-hover { background-color: #ca8a04; }
+.group-hover\:bg-teal-hover { background-color: #0d9488; }
+.group-hover\:bg-orange-hover { background-color: #f97316; }

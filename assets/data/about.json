@@ -37,52 +37,36 @@
   ],
   "team_members": [
     {
-      "id": "john-doe",
-      "name": "Budi Santoso",
+      "id": "jefferey",
+      "name": "Jefferey",
       "role": "CEO & Co-Founder",
-      "image": "https://via.placeholder.com/150/007bff/ffffff?text=BS",
-      "short_bio": "Mantan profesor ilmu komputer dengan passion pada pendidikan digital.",
-      "long_bio": "Budi memiliki pengalaman lebih dari 20 tahun di bidang teknologi dan pendidikan. Ia adalah otak di balik visi strategis EduLab dan terus mendorong batas-batas inovasi.",
-      "social": {
-        "linkedin": "#",
-        "twitter": "#"
-      }
+      "image": "https://via.placeholder.com/150/007bff/ffffff?text=JF",
+      "short_bio": "Mahasiswa UKDC, dengan visi kuat dalam pendidikan digital.",
+      "long_bio": "Jefferey adalah mahasiswa visioner di UKDC dan salah satu pendiri EduLab. Dengan latar belakang yang kuat dalam teknologi dan semangat untuk inovasi, ia memimpin tim dalam mengembangkan solusi pembelajaran yang mengubah paradigma. Visi utamanya adalah membuat pendidikan berkualitas tinggi dapat diakses oleh semua orang, di mana saja."
     },
     {
-      "id": "jane-smith",
+      "id": "siti-aminah",
       "name": "Siti Aminah",
       "role": "Chief Learning Officer",
       "image": "https://via.placeholder.com/150/28a745/ffffff?text=SA",
       "short_bio": "Pakar kurikulum dan metodologi pembelajaran adaptif.",
-      "long_bio": "Siti memimpin tim pengembangan kurikulum di EduLab. Dengan latar belakang psikologi pendidikan, ia memastikan setiap program dirancang untuk efektivitas belajar maksimal.",
-      "social": {
-        "linkedin": "#",
-        "twitter": "#"
-      }
+      "long_bio": "Siti Aminah memimpin tim pengembangan kurikulum di EduLab. Dengan latar belakang psikologi pendidikan dan pengalaman lebih dari 10 tahun, ia memastikan setiap program dirancang untuk efektivitas belajar maksimal melalui metodologi adaptif dan personalisasi."
     },
     {
-      "id": "david-lee",
+      "id": "david-kurniawan",
       "name": "David Kurniawan",
       "role": "CTO",
       "image": "https://via.placeholder.com/150/dc3545/ffffff?text=DK",
       "short_bio": "Arsitek di balik infrastruktur teknologi EduLab yang skalabel.",
-      "long_bio": "David adalah otak teknis EduLab. Dengan keahlian di cloud computing dan AI, ia membangun platform yang stabil, aman, dan inovatif untuk jutaan pengguna.",
-      "social": {
-        "linkedin": "#",
-        "twitter": "#"
-      }
+      "long_bio": "David adalah otak teknis di balik platform EduLab. Dengan keahlian mendalam di cloud computing, kecerdasan buatan, dan arsitektur sistem, ia membangun dan memelihara infrastruktur yang stabil, aman, dan inovatif untuk jutaan pengguna di seluruh dunia."
     },
     {
-      "id": "emily-clark",
+      "id": "fitriani-dewi",
       "name": "Fitriani Dewi",
       "role": "Head of Community",
       "image": "https://via.placeholder.com/150/ffc107/ffffff?text=FD",
       "short_bio": "Membangun dan membina komunitas pembelajar EduLab yang dinamis.",
-      "long_bio": "Fitriani bertanggung jawab atas ekosistem komunitas EduLab, memastikan siswa merasa terhubung, didukung, dan termotivasi melalui berbagai inisiatif dan acara.",
-      "social": {
-        "linkedin": "#",
-        "twitter": "#"
-      }
+      "long_bio": "Fitriani bertanggung jawab atas pengembangan dan pembinaan komunitas EduLab. Ia berdedikasi untuk menciptakan lingkungan yang suportif dan inklusif, di mana siswa dapat berkolaborasi, berbagi pengetahuan, dan tumbuh bersama melalui berbagai acara dan inisiatif komunitas."
     }
   ],
   "company_stats": [

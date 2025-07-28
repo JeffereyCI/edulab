@@ -12,23 +12,26 @@
 
     <div id="navbar-placeholder"></div>
 
-    <section class="bg-gradient-to-r from-teal-600 to-cyan-700 text-white py-20 px-4 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 id="contact-hero-title" class="text-5xl md:text-6xl font-bold mb-4"></h1>
-            <p id="contact-hero-subtitle" class="text-xl md:text-2xl font-light"></p>
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 px-4 text-center hero-services-bg relative overflow-hidden">
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h1 id="contact-hero-title" class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up"></h1>
+            <p id="contact-hero-subtitle" class="text-xl md:text-2xl font-light opacity-0 animate-fade-in-up delay-200"></p>
         </div>
+        <div class="hero-contact-shape-1"></div>
+        <div class="hero-contact-shape-2"></div>
     </section>
 
-    <section id="main-contact-info-section" class="py-20 px-4 bg-white">
+    <section id="map-location-section" class="py-20 px-4 bg-white">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Informasi Kontak Utama</h2>
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Lokasi Kantor Kami</h2>
             
-            <div id="contact-info-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="1280" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=Universitas+Katolik+Darma+Cendika&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://timenowin.net/">online clock</a><br><a href="https://online.stopwatch-timer.net/"></a><br><style>.mapouter{position: relative;text-align: right;height: 560px;width: 1280px;}</style><a href="https://www.mapembed.net">generate Google Maps</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 560px;width: 1280px;}</style></div></div>            
+            <div id="office-info-cards" class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                 </div>
         </div>
     </section>
 
-    <section id="contact-form-section" class="py-20 px-4 bg-gray-100">
+    <section id="contact-form-section" class="py-20 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Kirim Pesan kepada Kami</h2>
             
@@ -61,11 +64,7 @@
         </div>
     </section>
 
-    <section id="map-location-section" class="py-20 px-4 bg-white">
-        </div><div class="mapouter"><div class="gmap_canvas"><iframe width="560" height="560" id="gmap_canvas" src="https://maps.google.com/maps?q=Universitas+Katolik+Darma+Cendika&t=k&z=16&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://timenowin.net/">online clock</a><br><a href="https://online.stopwatch-timer.net/"></a><br><style>.mapouter{position: relative;text-align: right;height: 560px;width: 560px;}</style><a href="https://www.mapembed.net">google map net</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 560px;width: 560px;}</style></div></div>
-    </section>
-
-    <section id="faq-section" class="py-20 px-4 bg-gray-100">
+    <section id="faq-section" class="py-20 px-4 bg-white">
         <div class="max-w-4xl mx-auto">
             <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Pertanyaan yang Sering Diajukan</h2>
             <div class="mb-8">
@@ -75,6 +74,30 @@
                 </div>
         </div>
     </section>
+
+    <div id="chat-button" class="fixed bottom-8 right-8 bg-blue-600 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-blue-700 transition duration-300 z-50">
+        <img src="https://via.placeholder.com/32/0000FF/FFFFFF?text=Chat" alt="Chat Icon" class="w-8 h-8">
+    </div>
+
+    <div id="chat-window" class="fixed bottom-24 right-8 w-80 h-96 bg-white rounded-lg shadow-xl flex flex-col hidden z-50">
+        <div class="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+            <h3 class="font-bold text-lg">EduBot Live Chat</h3>
+            <button id="chat-close-btn" class="text-white hover:text-gray-200">
+                <img src="https://via.placeholder.com/24/0000FF/FFFFFF?text=X" alt="Close Icon" class="w-6 h-6">
+            </button>
+        </div>
+        <div id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-3">
+            </div>
+        <div class="p-4 border-t border-gray-200">
+            <input type="text" id="chat-input" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" placeholder="Ketik pesan Anda...">
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 px-4 text-center">
+        <div class="max-w-6xl mx-auto">
+            <p>&copy; 2025 EduLab. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="./assets/js/contact-scripts.js"></script>
 </body>

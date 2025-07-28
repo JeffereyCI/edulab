@@ -1,76 +1,12 @@
 {
   "hero": {
     "taglines": [
-      "There's no limit to where you can go.",
-      "Masa Depan Pembelajaran Ada di Sini.",
-      "Kembangkan Potensi Anda Bersama Kami.",
-      "Belajar Tanpa Batas, Raih Impian Anda."
+      "Kembangkan Potensi Anda Tanpa Batas."
     ],
     "stats": [
       { "id": "users-count", "label": "Pengguna Aktif", "target": 15000, "isPercentage": false },
       { "id": "projects-count", "label": "Proyek Selesai", "target": 2500, "isPercentage": false },
       { "id": "success-rate", "label": "Tingkat Keberhasilan", "target": 95, "isPercentage": true }
     ]
-  },
-  "features": [
-    {
-      "icon": "💡",
-      "title": "Pembelajaran Interaktif",
-      "short_desc": "Modul pembelajaran yang dirancang untuk keterlibatan maksimal, dengan kuis interaktif dan proyek nyata.",
-      "long_desc": "Kami menawarkan simulasi praktis, studi kasus dunia nyata, dan forum diskusi aktif. Setiap modul dirancang untuk meningkatkan pemahaman dan retensi materi secara signifikan, memastikan Anda tidak hanya belajar teori, tetapi juga mampu mengaplikasikannya."
-    },
-    {
-      "icon": "👨‍🏫",
-      "title": "Instruktur Berpengalaman",
-      "short_desc": "Belajar dari para ahli di bidangnya yang siap membimbing Anda mencapai kesuksesan.",
-      "long_desc": "Instruktur kami adalah profesional industri dengan pengalaman bertahun-tahun, membawa wawasan praktis dan pengetahuan mendalam ke setiap sesi. Mereka berkomitmen untuk memberikan bimbingan personal dan umpan balik konstruktif."
-    },
-    {
-      "icon": "📈",
-      "title": "Jalur Karir Jelas",
-      "short_desc": "Dapatkan keterampilan yang relevan dengan industri dan terhubung dengan peluang karir.",
-      "long_desc": "Kami menyediakan sesi persiapan wawancara, penyusunan resume, dan akses ke jaringan alumni serta mitra industri kami. Kami berinvestasi dalam kesuksesan karir Anda setelah lulus dari program EduLab."
-    },
-    {
-      "icon": "💻",
-      "title": "Akses Fleksibel",
-      "short_desc": "Belajar kapan saja, di mana saja, dengan perangkat apa saja. Kurikulum kami menyesuaikan jadwal Anda.",
-      "long_desc": "Platform kami dapat diakses 24/7 melalui desktop, tablet, atau smartphone. Anda memiliki kendali penuh atas kecepatan belajar Anda, memungkinkan Anda menyesuaikan pendidikan dengan gaya hidup sibuk Anda."
-    },
-    {
-      "icon": "🤝",
-      "title": "Komunitas Pendukung",
-      "short_desc": "Bergabunglah dengan komunitas pembelajar yang dinamis untuk berkolaborasi dan berbagi.",
-      "long_desc": "Terhubung dengan sesama siswa, instruktur, dan alumni melalui forum online, grup studi, dan acara jejaring virtual. Komunitas kami adalah tempat untuk belajar, tumbuh, dan saling mendukung."
-    },
-    {
-      "icon": "🏆",
-      "title": "Sertifikasi Bergengsi",
-      "short_desc": "Selesaikan kursus dan dapatkan sertifikat yang diakui untuk meningkatkan profil profesional Anda.",
-      "long_desc": "Sertifikat EduLab diakui secara luas di berbagai industri, memberikan bukti konkret tentang keahlian Anda. Ini akan membantu Anda menonjol di pasar kerja dan membuka pintu peluang baru."
-    }
-  ],
-  "testimonials": [
-    {
-      "image": "https://via.placeholder.com/80/007bff/ffffff?text=AW",
-      "quote": "EduLab mengubah cara saya belajar! Materi interaktif dan instruktur yang suportif membuat prosesnya sangat menyenangkan dan efektif.",
-      "name": "Ahmad W.",
-      "role": "Web Developer",
-      "rating": 5.0
-    },
-    {
-      "image": "https://via.placeholder.com/80/28a745/ffffff?text=SK",
-      "quote": "Saya tidak menyangka bisa belajar sebanyak ini dalam waktu singkat. Kurikulumnya sangat relevan dengan kebutuhan industri saat ini!",
-      "name": "Siti K.",
-      "role": "Data Scientist",
-      "rating": 4.5
-    },
-    {
-      "image": "https://via.placeholder.com/80/6f42c1/ffffff?text=BF",
-      "quote": "Komunitas EduLab sangat mendukung! Saya menemukan teman belajar dan mentor yang luar biasa di sini.",
-      "name": "Budi F.",
-      "role": "UI/UX Designer",
-      "rating": 5.0
-    }
-  ]
+  }
 }

@@ -17,7 +17,7 @@
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #d1d5db; /* Gray-300 */
+    background-color: #d1d5db;
     z-index: 0;
 }
 
@@ -26,11 +26,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
-    opacity: 0; /* Hidden by default for animation */
-    transform: translateY(50px); /* Start position for animation */
+    opacity: 0;
+    transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     position: relative;
-    z-index: 1; /* Above the line */
+    z-index: 1;
 }
 
 .timeline-item.active {
@@ -39,7 +39,7 @@
 }
 
 .timeline-item:nth-child(even) {
-    flex-direction: row-reverse; /* Alternate sides */
+    flex-direction: row-reverse;
 }
 
 .timeline-item-content {
@@ -47,7 +47,7 @@
     padding: 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    width: 45%; /* Take almost half width */
+    width: 45%;
     position: relative;
 }
 
@@ -63,50 +63,49 @@
 }
 
 .timeline-item:nth-child(odd) .timeline-item-content::before {
-    right: -16px; /* Position arrow on the right */
-    border-width: 10px 0 10px 10px; /* Right-pointing arrow */
+    right: -16px;
+    border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
 }
 
 .timeline-item:nth-child(even) .timeline-item-content::before {
-    left: -16px; /* Position arrow on the left */
-    border-width: 10px 10px 10px 0; /* Left-pointing arrow */
+    left: -16px;
+    border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
 }
 
 .timeline-item-dot {
-    background-color: #3b82f6; /* Blue-500 */
-    border: 4px solid #fff; /* White border */
+    background-color: #3b82f6;
+    border: 4px solid #fff;
     border-radius: 50%;
     width: 24px;
     height: 24px;
-    flex-shrink: 0; /* Prevent dot from shrinking */
+    flex-shrink: 0;
     z-index: 2;
-    position: relative; /* Above the line */
+    position: relative;
 }
 
-/* Responsive timeline */
 @media (max-width: 768px) {
     #timeline-container::before {
-        left: 20px; /* Move line to the left */
+        left: 20px;
         transform: none;
     }
     .timeline-item {
-        flex-direction: column !important; /* Stack vertically */
+        flex-direction: column !important;
         align-items: flex-start;
         margin-left: 0;
     }
     .timeline-item-content {
         width: 100%;
-        margin-left: 50px; /* Space for line and dot */
+        margin-left: 50px;
     }
     .timeline-item-dot {
         position: absolute;
         left: 10px;
-        top: 0; /* Align dot to the top of the card */
+        top: 0;
     }
     .timeline-item-content::before {
-        left: -16px; /* All arrows point left */
+        left: -16px;
         right: auto;
         border-width: 10px 10px 10px 0 !important;
         border-color: transparent white transparent transparent !important;
@@ -124,89 +123,73 @@
     /* Styles for stat labels */
 }
 
-/* Team Member Cards */
-.team-card-container {
-    perspective: 1000px; /* Needed for 3D flip effect */
-    height: 350px; /* Fixed height for consistent card size */
-    cursor: pointer;
-}
-
-.team-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s; /* Smooth flip transition */
-    transform-style: preserve-3d; /* Keep 3D transformation */
+/* Team Member Cards - PERBAIKAN STYLING */
+.team-card {
+    background-color: white;
+    padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.team-card-container:hover .team-card-inner {
-    transform: rotateY(180deg);
-}
-
-.team-card-front, .team-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Hide back face when rotated */
-    backface-visibility: hidden;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+    min-height: 280px; /* Minimal tinggi agar konsisten jika ada grid */
 }
 
-.team-card-front {
-    background-color: white;
-    color: #333;
-    z-index: 2;
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.team-card-front img {
+.team-card img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
+    border: 3px solid #3b82f6; /* Blue border */
 }
 
-.team-card-front h3 {
+.team-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 0.25rem;
+    color: #1f2937;
 }
 
-.team-card-front p {
+.team-card p.role {
     font-size: 1rem;
-    color: #6b7280;
+    color: #2563eb; /* Blue for role */
+    font-weight: 600;
+    margin-bottom: 0.75rem;
 }
 
-.team-card-back {
-    background-color: #3b82f6; /* Blue-500 */
-    color: white;
-    transform: rotateY(180deg); /* Start rotated for the back face */
-    padding: 2rem; /* More padding for details */
-}
-
-.team-card-back p {
-    font-size: 0.95rem;
+.team-card p.bio {
+    font-size: 0.9rem;
+    color: #4b5563;
     line-height: 1.5;
-    margin-bottom: 1rem;
+    flex-grow: 1; /* Biarkan bio mengambil ruang dan dorong social links ke bawah */
 }
 
-.team-card-social a {
-    color: white;
+.team-card .social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.team-card .social-links a {
+    color: #6b7280;
     font-size: 1.5rem;
-    margin: 0 0.5rem;
-    transition: transform 0.2s ease;
+    transition: color 0.3s ease;
 }
 
-.team-card-social a:hover {
-    transform: scale(1.2);
+.team-card .social-links a:hover {
+    color: #2563eb;
 }
 
 /* Company Values Section */
@@ -218,8 +201,11 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    overflow: hidden; /* For progressive disclosure */
-    position: relative; /* For interactive overlay/details */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .value-card:hover {
@@ -227,10 +213,22 @@
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.value-card .value-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    display: block; /* Ensure icon is block level */
+.value-icon-placeholder {
+    width: 64px;
+    height: 64px;
+    background-color: #e0f2fe;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.value-icon-placeholder svg {
+    width: 36px;
+    height: 36px;
+    color: #2563eb;
 }
 
 .value-card h3 {
@@ -247,7 +245,6 @@
     margin-bottom: 1rem;
 }
 
-/* Progressive Disclosure for Values */
 .value-card-details {
     overflow: hidden;
     height: 0;
@@ -256,7 +253,7 @@
 }
 
 .value-card-details.expanded {
-    height: auto; /* Adjusted by JS */
+    height: auto;
     opacity: 1;
     margin-top: 1rem;
     border-top: 1px solid #e5e7eb;
@@ -266,14 +263,17 @@
 .value-card .toggle-details-btn {
     background: none;
     border: none;
-    color: #2563eb; /* Blue-700 */
+    color: #2563eb;
     font-weight: 600;
     cursor: pointer;
     padding: 0;
     margin-top: 1rem;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .value-card .toggle-details-btn:hover {
-    color: #1d4ed8; /* Blue-800 */
+    color: #1d4ed8;
 }

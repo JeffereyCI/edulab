@@ -25,8 +25,7 @@ const EduLabServicesPage = (() => {
         filterContainer.innerHTML = '';
         categories.forEach(category => {
             const button = document.createElement('button');
-            // Menggunakan kelas untuk tab filter yang baru
-            button.className = `category-tab-btn ${category.id === 'data-science' ? 'active' : ''}`; // Set 'data-science' as default active
+            button.className = `category-tab-btn ${category.id === 'data-science' ? 'active' : ''}`;
             button.dataset.category = category.id;
             button.textContent = category.name;
             filterContainer.appendChild(button);
@@ -42,13 +41,10 @@ const EduLabServicesPage = (() => {
     };
 
     const formatReviewCount = (count) => {
-        return `${new Intl.NumberFormat('en-US').format(count)} review`; // Format like "50,568 review"
+        return `${new Intl.NumberFormat('en-US').format(count)} review`;
     };
 
-    // Helper untuk merender rating bintang sederhana (sesuai komponen catalog-card)
     const renderSimpleStarRating = (rating) => {
-        // Karena komponen hanya menampilkan "⭐ 0", kita bisa sederhanakan atau tampilkan rating numerik
-        // Untuk konsisten dengan "⭐ 0" dari komponen:
         return `⭐ ${rating.toFixed(1)}`;
     };
 
@@ -63,22 +59,22 @@ const EduLabServicesPage = (() => {
         }
 
         products.forEach(product => {
-            // Logika untuk menampilkan/menyembunyikan badge dan kelas warnanya
-            const badgeClass = product.badge ? '' : 'hidden'; // Jika ada badge, jangan hidden
-            let badgeBgClass = 'bg-yellow-400'; // Default warna badge
+            const badgeClass = product.badge ? '' : 'hidden';
+            let badgeBgClass = 'bg-yellow-400';
             if (product.badge === 'Bestseller') {
-                badgeBgClass = 'bg-indigo-600'; // Contoh warna berbeda untuk Bestseller
+                badgeBgClass = 'bg-indigo-600';
             } else if (product.badge === 'Premium') {
-                badgeBgClass = 'bg-green-600'; // Contoh warna berbeda untuk Premium
+                badgeBgClass = 'bg-green-600';
+            } else if (product.badge === 'Highest Rated') {
+                badgeBgClass = 'bg-orange-500';
             }
 
-            // Menggunakan struktur catalog-card yang Anda berikan
             const cardHtml = `
                 <div class="product-card shadow-lg rounded-xl border border-gray-200 p-4 transition hover:shadow-xl" data-category="${product.category}">
                     <img class="w-full h-40 object-cover rounded-md mb-3" src="${product.image}" alt="${product.title}">
                     <div class="flex items-center justify-between">
+                        <span class="text-sm font-semibold text-gray-700 rating">⭐ ${product.rating.toFixed(1)}</span>
                         <span class="text-xs ${badgeBgClass} text-white font-semibold rounded px-2 py-1 badge ${badgeClass}">${product.badge}</span>
-                        <span class="text-sm font-semibold text-gray-700 rating">${renderSimpleStarRating(product.rating)}</span>
                     </div>
                     <h3 class="text-base font-bold mt-2 title">${product.title}</h3>
                     <p class="text-sm text-gray-600 instructor">${product.instructor}</p>
@@ -101,7 +97,7 @@ const EduLabServicesPage = (() => {
 
     const setupPriceCalculator = () => {
         const programSelect = document.getElementById('program-select');
-        const durationSelect = document.getElementById('duration-select');
+        const durationSelect = document.getElementById('duration-select'); // Menggunakan ID yang benar
         const estimatedPriceDisplay = document.getElementById('estimated-price');
 
         if (!programSelect || !durationSelect || !estimatedPriceDisplay) return;
@@ -150,49 +146,51 @@ const EduLabServicesPage = (() => {
         });
     };
 
-    const renderComparisonTable = (packages) => {
-        const tableBody = document.getElementById('comparison-table-body');
-        const tableHeadRow = document.querySelector('#comparison-table thead tr');
+    const renderPricingCards = (packages) => {
+        const pricingCardsContainer = document.getElementById('pricing-cards-container');
+        if (!pricingCardsContainer || !packages) return;
 
-        if (!tableBody || !tableHeadRow) return;
-
-        while (tableHeadRow.children.length > 1) {
-            tableHeadRow.removeChild(tableHeadRow.lastChild);
-        }
-        tableBody.innerHTML = '';
+        pricingCardsContainer.innerHTML = '';
 
         packages.forEach(pkg => {
-            const th = document.createElement('th');
-            th.className = `py-4 px-6 border-b text-gray-700 font-semibold text-lg text-center ${pkg.highlight ? 'comparison-highlight' : ''}`;
-            th.textContent = pkg.name;
-            tableHeadRow.appendChild(th);
-        });
+            const highlightClass = pkg.highlight ? 'highlight' : '';
+            const popularBadgeHtml = pkg.highlight ? '<span class="popular-badge">TERPOPULER!</span>' : '';
+            const limitedStockHtml = pkg.limited_stock ? `
+            ` : '';
 
-        const allFeatures = new Set();
-        packages.forEach(pkg => {
-            pkg.features.forEach(feature => allFeatures.add(feature));
-        });
+            // Menggunakan kelas standar Tailwind untuk warna tombol, bukan string langsung dari JSON
+            let subscribeButtonClasses = 'bg-blue-600 hover:bg-blue-700'; // Default button color
+            if (pkg.highlight) {
+                subscribeButtonClasses = 'bg-white text-blue-600 hover:bg-gray-200'; // White button for highlight card
+            } else if (pkg.name === '1 Bulan') {
+                subscribeButtonClasses = 'bg-blue-600 hover:bg-blue-700'; // Default blue for 1 Bulan
+            } else if (pkg.name === '12 Bulan') {
+                subscribeButtonClasses = 'bg-purple-600 hover:bg-purple-700'; // Purple for 12 Bulan
+            }
+            // Button color logic can be more sophisticated if needed, but this aligns with simplicity.
 
-        allFeatures.forEach(feature => {
-            const tr = document.createElement('tr');
-            const featureTd = document.createElement('td');
-            featureTd.className = 'py-4 px-6 border-b';
-            featureTd.textContent = feature;
-            tr.appendChild(featureTd);
 
-            packages.forEach(pkg => {
-                const td = document.createElement('td');
-                td.className = 'py-4 px-6 border-b';
-                if (pkg.features.includes(feature)) {
-                    td.innerHTML = '<span class="text-green-500 font-bold">✓</span>';
-                } else {
-                    td.innerHTML = '<span class="text-red-500">✗</span>';
-                }
-                tr.appendChild(td);
-            });
-            tableBody.appendChild(tr);
+            const cardHtml = `
+                <div class="pricing-card ${highlightClass}">
+                    ${popularBadgeHtml}
+                    <h3 class="package-name">${pkg.name}</h3>
+                    <p class="package-tagline">${pkg.tagline}</p>
+                    <div class="price-block">
+                        <p class="original-price">${formatRupiah(pkg.original_price)}</p>
+                        <p class="current-price">${formatRupiah(pkg.price)}</p>
+                        <p class="per-unit-price">${pkg.per_unit_price}</p>
+                    </div>
+                    <ul class="features-list">
+                        ${pkg.features.map(feature => `<li><span class="check-icon">✓</span>${feature}</li>`).join('')}
+                    </ul>
+                    <button class="${subscribeButtonClasses} text-white subscribe-btn">${pkg.button_text}</button>
+                    ${limitedStockHtml}
+                </div>
+            `;
+            pricingCardsContainer.insertAdjacentHTML('beforeend', cardHtml);
         });
     };
+
 
     const formatRupiah = (number) => {
         return new Intl.NumberFormat('id-ID', {
@@ -206,13 +204,11 @@ const EduLabServicesPage = (() => {
         await fetchServicesData();
 
         renderCategoryFilters(servicesData.categories);
-        // Default filter to "Data Science" as per reference, if it exists
         const defaultCategory = servicesData.categories.find(cat => cat.id === 'data-science') ? 'data-science' : 'all';
-        filterProducts(defaultCategory); // Initial render with default category
+        filterProducts(defaultCategory);
 
         setupPriceCalculator();
-
-        renderComparisonTable(servicesData.comparison_packages);
+        renderPricingCards(servicesData.comparison_packages);
 
         console.log("EduLab Services Page scripts initialized.");
     };
