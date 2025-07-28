@@ -1,0 +1,120 @@
+{
+  "hero_about": {
+    "title": "Mengenal EduLab: Misi Kami dalam Pendidikan",
+    "subtitle": "Kami percaya pada kekuatan pendidikan untuk mengubah kehidupan."
+  },
+  "timeline": [
+    {
+      "year": "2010",
+      "title": "Awal Mula Visi EduLab",
+      "description": "EduLab didirikan oleh sekelompok pendidik visioner dengan misi untuk mendemokratisasi akses pendidikan berkualitas tinggi secara global."
+    },
+    {
+      "year": "2015",
+      "title": "Peluncuran Platform Pertama",
+      "description": "Versi beta platform pembelajaran online EduLab diluncurkan, dengan fokus pada kursus pemrograman dan data science. Mendapat respons positif dari komunitas pembelajar awal."
+    },
+    {
+      "year": "2018",
+      "title": "Ekspansi Global & Kemitraan",
+      "description": "EduLab memperluas jangkauannya ke pasar internasional dan menjalin kemitraan strategis dengan universitas terkemuka serta perusahaan teknologi, memperkaya kurikulum kami."
+    },
+    {
+      "year": "2020",
+      "title": "Inovasi Teknologi Pembelajaran",
+      "description": "Kami meluncurkan fitur interaktif berbasis AI pertama kami, termasuk asisten belajar adaptif dan simulasi virtual, menjadikan pembelajaran lebih personal dan imersif."
+    },
+    {
+      "year": "2023",
+      "title": "Pencapaian 1 Juta Pengguna",
+      "description": "EduLab dengan bangga merayakan tonggak sejarah 1 juta pengguna aktif di seluruh dunia, membuktikan dampak positif platform kami pada jutaan karir dan kehidupan."
+    },
+    {
+      "year": "2025",
+      "title": "Masa Depan EduLab",
+      "description": "Terus berinovasi, EduLab berkomitmen untuk menjelajahi batasan baru dalam edutech, menghadirkan pengalaman belajar yang belum pernah ada sebelumnya dan mempersiapkan talenta masa depan."
+    }
+  ],
+  "team_members": [
+    {
+      "id": "john-doe",
+      "name": "Budi Santoso",
+      "role": "CEO & Co-Founder",
+      "image": "https://via.placeholder.com/150/007bff/ffffff?text=BS",
+      "short_bio": "Mantan profesor ilmu komputer dengan passion pada pendidikan digital.",
+      "long_bio": "Budi memiliki pengalaman lebih dari 20 tahun di bidang teknologi dan pendidikan. Ia adalah otak di balik visi strategis EduLab dan terus mendorong batas-batas inovasi.",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      }
+    },
+    {
+      "id": "jane-smith",
+      "name": "Siti Aminah",
+      "role": "Chief Learning Officer",
+      "image": "https://via.placeholder.com/150/28a745/ffffff?text=SA",
+      "short_bio": "Pakar kurikulum dan metodologi pembelajaran adaptif.",
+      "long_bio": "Siti memimpin tim pengembangan kurikulum di EduLab. Dengan latar belakang psikologi pendidikan, ia memastikan setiap program dirancang untuk efektivitas belajar maksimal.",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      }
+    },
+    {
+      "id": "david-lee",
+      "name": "David Kurniawan",
+      "role": "CTO",
+      "image": "https://via.placeholder.com/150/dc3545/ffffff?text=DK",
+      "short_bio": "Arsitek di balik infrastruktur teknologi EduLab yang skalabel.",
+      "long_bio": "David adalah otak teknis EduLab. Dengan keahlian di cloud computing dan AI, ia membangun platform yang stabil, aman, dan inovatif untuk jutaan pengguna.",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      }
+    },
+    {
+      "id": "emily-clark",
+      "name": "Fitriani Dewi",
+      "role": "Head of Community",
+      "image": "https://via.placeholder.com/150/ffc107/ffffff?text=FD",
+      "short_bio": "Membangun dan membina komunitas pembelajar EduLab yang dinamis.",
+      "long_bio": "Fitriani bertanggung jawab atas ekosistem komunitas EduLab, memastikan siswa merasa terhubung, didukung, dan termotivasi melalui berbagai inisiatif dan acara.",
+      "social": {
+        "linkedin": "#",
+        "twitter": "#"
+      }
+    }
+  ],
+  "company_stats": [
+    { "id": "global-reach", "label": "Negara Terjangkau", "target": 120, "suffix": "+" },
+    { "id": "courses-offered", "label": "Kursus Tersedia", "target": 500, "suffix": "+" },
+    { "id": "expert-instructors", "label": "Instruktur Ahli", "target": 150, "suffix": "+" },
+    { "id": "learning-hours", "label": "Jam Belajar Terselesaikan", "target": 1000000, "suffix": "+" }
+  ],
+  "company_values": [
+    {
+      "icon_class": "icon-innovation",
+      "title": "Inovasi Tanpa Henti",
+      "short_desc": "Kami selalu mencari cara baru untuk meningkatkan pengalaman belajar.",
+      "long_desc": "Inovasi adalah inti dari segala yang kami lakukan. Kami berinvestasi dalam penelitian dan pengembangan teknologi baru untuk menghadirkan solusi pembelajaran yang adaptif dan futuristik."
+    },
+    {
+      "icon_class": "icon-quality",
+      "title": "Kualitas Pendidikan",
+      "short_desc": "Komitmen kami terhadap kurikulum dan pengajaran berstandar tertinggi.",
+      "long_desc": "Setiap kursus di EduLab dirancang dengan cermat oleh para ahli. Kami memastikan konten yang relevan, instruktur berkualitas, dan metodologi yang terbukti efektif."
+    },
+    {
+      "icon_class": "icon-accessibility",
+      "title": "Aksesibilitas Universal",
+      "short_desc": "Pendidikan harus tersedia untuk semua, di mana pun mereka berada.",
+      "long_desc": "Kami bekerja keras untuk menghilangkan hambatan dalam pendidikan, menawarkan opsi fleksibel dan berinvestasi dalam teknologi yang membuat pembelajaran dapat diakses oleh semua kalangan."
+    },
+    {
+      "icon_class": "icon-community",
+      "title": "Komunitas dan Dukungan",
+      "short_desc": "Menciptakan lingkungan belajar yang suportif dan inklusif.",
+      "long_desc": "Pembelajaran adalah perjalanan sosial. Kami membina komunitas di mana siswa dapat berkolaborasi, berbagi pengetahuan, dan mendapatkan dukungan dari sesama pembelajar dan mentor."
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+/* assets/css/about-styles.css */
+
+/* Hero Section About */
+/* No specific styles needed here beyond Tailwind's utility classes */
+
+/* Company Story Timeline */
+#timeline-container {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+#timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #d1d5db; /* Gray-300 */
+    z-index: 0;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    opacity: 0; /* Hidden by default for animation */
+    transform: translateY(50px); /* Start position for animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    position: relative;
+    z-index: 1; /* Above the line */
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse; /* Alternate sides */
+}
+
+.timeline-item-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 45%; /* Take almost half width */
+    position: relative;
+}
+
+.timeline-item-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-item-content::before {
+    right: -16px; /* Position arrow on the right */
+    border-width: 10px 0 10px 10px; /* Right-pointing arrow */
+    border-color: transparent transparent transparent white;
+}
+
+.timeline-item:nth-child(even) .timeline-item-content::before {
+    left: -16px; /* Position arrow on the left */
+    border-width: 10px 10px 10px 0; /* Left-pointing arrow */
+    border-color: transparent white transparent transparent;
+}
+
+.timeline-item-dot {
+    background-color: #3b82f6; /* Blue-500 */
+    border: 4px solid #fff; /* White border */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0; /* Prevent dot from shrinking */
+    z-index: 2;
+    position: relative; /* Above the line */
+}
+
+/* Responsive timeline */
+@media (max-width: 768px) {
+    #timeline-container::before {
+        left: 20px; /* Move line to the left */
+        transform: none;
+    }
+    .timeline-item {
+        flex-direction: column !important; /* Stack vertically */
+        align-items: flex-start;
+        margin-left: 0;
+    }
+    .timeline-item-content {
+        width: 100%;
+        margin-left: 50px; /* Space for line and dot */
+    }
+    .timeline-item-dot {
+        position: absolute;
+        left: 10px;
+        top: 0; /* Align dot to the top of the card */
+    }
+    .timeline-item-content::before {
+        left: -16px; /* All arrows point left */
+        right: auto;
+        border-width: 10px 10px 10px 0 !important;
+        border-color: transparent white transparent transparent !important;
+    }
+}
+
+/* Company Statistics */
+.stats-card {
+    /* Styles for stat cards, similar to index.html if needed */
+}
+.stats-value {
+    /* Styles for stat numbers */
+}
+.stats-label {
+    /* Styles for stat labels */
+}
+
+/* Team Member Cards */
+.team-card-container {
+    perspective: 1000px; /* Needed for 3D flip effect */
+    height: 350px; /* Fixed height for consistent card size */
+    cursor: pointer;
+}
+
+.team-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s; /* Smooth flip transition */
+    transform-style: preserve-3d; /* Keep 3D transformation */
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.team-card-container:hover .team-card-inner {
+    transform: rotateY(180deg);
+}
+
+.team-card-front, .team-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Hide back face when rotated */
+    backface-visibility: hidden;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-card-front {
+    background-color: white;
+    color: #333;
+    z-index: 2;
+}
+
+.team-card-front img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.team-card-front h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.team-card-front p {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.team-card-back {
+    background-color: #3b82f6; /* Blue-500 */
+    color: white;
+    transform: rotateY(180deg); /* Start rotated for the back face */
+    padding: 2rem; /* More padding for details */
+}
+
+.team-card-back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.team-card-social a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.team-card-social a:hover {
+    transform: scale(1.2);
+}
+
+/* Company Values Section */
+.value-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; /* For progressive disclosure */
+    position: relative; /* For interactive overlay/details */
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.value-card .value-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block; /* Ensure icon is block level */
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.value-card .value-short-desc {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Progressive Disclosure for Values */
+.value-card-details {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.value-card-details.expanded {
+    height: auto; /* Adjusted by JS */
+    opacity: 1;
+    margin-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.value-card .toggle-details-btn {
+    background: none;
+    border: none;
+    color: #2563eb; /* Blue-700 */
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.value-card .toggle-details-btn:hover {
+    color: #1d4ed8; /* Blue-800 */
+}
