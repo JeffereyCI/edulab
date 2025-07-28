@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLab - Portofolio</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/portofolio-styles.css">
+    <script src="./assets/js/navbar-loader.js"></script>
+</head>
+<body class="font-sans antialiased bg-gray-50">
+
+    <div id="navbar-placeholder"></div>
+
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-800 text-white py-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 id="portfolio-hero-title" class="text-5xl md:text-6xl font-bold mb-4"></h1>
+            <p id="portfolio-hero-subtitle" class="text-xl md:text-2xl font-light"></p>
+        </div>
+    </section>
+
+    <section id="project-showcase" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Proyek Terbaru Kami</h2>
+
+            <div id="project-filters" class="flex flex-wrap justify-center gap-3 mb-12 border-b border-gray-200 pb-4">
+                </div>
+
+            <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+        </div>
+    </section>
+
+    <div id="project-detail-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative p-8">
+            <button id="modal-close-btn" class="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold">&times;</button>
+            <div id="modal-content">
+                <h3 class="text-3xl font-bold text-gray-900 mb-4" id="modal-project-title"></h3>
+                <p class="text-gray-700 mb-6" id="modal-project-long-desc"></p>
+
+                <div id="modal-gallery-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    </div>
+                <div class="text-center text-gray-600 text-sm mb-6">Klik gambar untuk memperbesar</div>
+
+                <div id="modal-client-testimonial" class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-600 italic text-gray-800">
+                    <p class="mb-2" id="testimonial-quote"></p>
+                    <p class="text-sm font-semibold" id="testimonial-client-info"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
+        <img id="lightbox-image" src="" alt="Lightbox Image" class="max-w-[90vw] max-h-[90vh] object-contain">
+        <button id="lightbox-close-btn" class="absolute top-4 right-4 text-white text-5xl font-bold">&times;</button>
+        <button id="lightbox-prev-btn" class="absolute left-4 p-3 bg-gray-800 bg-opacity-50 text-white rounded-full text-3xl hover:bg-opacity-75 transition">&lsaquo;</button>
+        <button id="lightbox-next-btn" class="absolute right-4 p-3 bg-gray-800 bg-opacity-50 text-white rounded-full text-3xl hover:bg-opacity-75 transition">&rsaquo;</button>
+    </div>
+
+    <script src="./assets/js/portofolio-scripts.js"></script>
+</body>
+</html>

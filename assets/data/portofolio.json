@@ -1,0 +1,110 @@
+{
+  "hero_portfolio": {
+    "title": "Portofolio Proyek Kami",
+    "subtitle": "Lihat bagaimana EduLab membantu klien mencapai tujuan pembelajaran mereka."
+  },
+  "project_categories": [
+    { "id": "all", "name": "Semua" },
+    { "id": "web-development", "name": "Pengembangan Web" },
+    { "id": "data-science", "name": "Data Science & AI" },
+    { "id": "ui-ux-design", "name": "Desain UI/UX" },
+    { "id": "mobile-app", "name": "Aplikasi Mobile" },
+    { "id": "corporate-training", "name": "Pelatihan Korporat" }
+  ],
+  "projects": [
+    {
+      "id": "e-learning-platform",
+      "type": "web-development",
+      "industry": "Education",
+      "title": "Platform E-Learning Interaktif",
+      "short_description": "Mengembangkan platform pembelajaran online yang skalabel dengan fitur kuis adaptif dan forum diskusi.",
+      "thumbnail_image": "https://via.placeholder.com/400x250/33A1FF/FFFFFF?text=E-learning+Platform",
+      "gallery_images": [
+        "https://via.placeholder.com/800x600/33A1FF/FFFFFF?text=E-learning+Screenshot+1",
+        "https://via.placeholder.com/800x600/33A1FF/FFFFFF?text=E-learning+Screenshot+2",
+        "https://via.placeholder.com/800x600/33A1FF/FFFFFF?text=E-learning+Screenshot+3"
+      ],
+      "long_description": "EduLab bekerja sama dengan sebuah institusi pendidikan untuk merancang dan mengembangkan platform e-learning yang inovatif. Proyek ini meliputi modul pembelajaran interaktif, sistem manajemen kursus yang kuat, serta integrasi alat kolaborasi. Hasilnya adalah peningkatan retensi siswa dan pengalaman belajar yang lebih personal.",
+      "client_testimonial": {
+        "quote": "EduLab melampaui ekspektasi kami. Platform baru ini telah mengubah cara siswa kami belajar. Dukungan tim sangat luar biasa!",
+        "client_name": "Dr. Sarah Lee",
+        "client_role": "Direktur Akademik, Global Academy"
+      }
+    },
+    {
+      "id": "ai-data-dashboard",
+      "type": "data-science",
+      "industry": "Finance",
+      "title": "Dashboard Analisis Data Keuangan Bertenaga AI",
+      "short_description": "Membangun dashboard cerdas untuk memvisualisasikan data keuangan kompleks dan memprediksi tren pasar.",
+      "thumbnail_image": "https://via.placeholder.com/400x250/FF5733/FFFFFF?text=AI+Dashboard",
+      "gallery_images": [
+        "https://via.placeholder.com/800x600/FF5733/FFFFFF?text=AI+Dashboard+1",
+        "https://via.placeholder.com/800x600/FF5733/FFFFFF?text=AI+Dashboard+2"
+      ],
+      "long_description": "Untuk klien di sektor keuangan, kami mengembangkan dashboard analisis data yang inovatif, memanfaatkan algoritma AI untuk mendeteksi anomali dan memprediksi pergerakan pasar. Ini membantu klien membuat keputusan investasi yang lebih cerdas dan cepat.",
+      "client_testimonial": {
+        "quote": "Keahlian EduLab di bidang AI dan Data Science tidak tertandingi. Dashboard ini telah menjadi alat yang tak ternilai bagi tim analisis kami.",
+        "client_name": "Pak Budi Hartono",
+        "client_role": "Kepala Analisis Pasar, Investasi Makmur"
+      }
+    },
+    {
+      "id": "mobile-wellness-app",
+      "type": "mobile-app",
+      "industry": "Healthcare",
+      "title": "Aplikasi Mobile Wellness & Tracking",
+      "short_description": "Desain dan pengembangan aplikasi mobile untuk memantau kesehatan dan kebugaran pengguna dengan fitur personalisasi.",
+      "thumbnail_image": "https://via.placeholder.com/400x250/28a745/FFFFFF?text=Wellness+App",
+      "gallery_images": [
+        "https://via.placeholder.com/800x600/28a745/FFFFFF?text=Wellness+App+1",
+        "https://via.placeholder.com/800x600/28a745/FFFFFF?text=Wellness+App+2",
+        "https://via.placeholder.com/800x600/28a745/FFFFFF?text=Wellness+App+3",
+        "https://via.placeholder.com/800x600/28a745/FFFFFF?text=Wellness+App+4"
+      ],
+      "long_description": "Kami merancang aplikasi mobile yang ramah pengguna untuk membantu individu mengelola kesehatan mereka. Fitur termasuk pelacakan aktivitas, rencana makan personal, dan integrasi dengan perangkat wearable. Pengalaman pengguna yang intuitif adalah kunci keberhasilan aplikasi ini.",
+      "client_testimonial": {
+        "quote": "Aplikasi ini luar biasa! Desainnya intuitif dan membantu kami terhubung dengan pengguna kami secara lebih efektif. EduLab adalah mitra yang andal.",
+        "client_name": "Ibu Lia Permata",
+        "client_role": "CEO, HealthyLife Solutions"
+      }
+    },
+    {
+      "id": "corporate-sales-training",
+      "type": "corporate-training",
+      "industry": "Sales",
+      "title": "Modul Pelatihan Penjualan Korporat",
+      "short_description": "Mengembangkan modul pelatihan penjualan interaktif untuk meningkatkan keterampilan tim penjualan korporat besar.",
+      "thumbnail_image": "https://via.placeholder.com/400x250/8A2BE2/FFFFFF?text=Sales+Training",
+      "gallery_images": [
+        "https://via.placeholder.com/800x600/8A2BE2/FFFFFF?text=Sales+Training+1",
+        "https://via.placeholder.com/800x600/8A2BE2/FFFFFF?text=Sales+Training+2"
+      ],
+      "long_description": "EduLab bermitra dengan sebuah perusahaan multinasional untuk membuat program pelatihan penjualan yang disesuaikan. Program ini menggunakan skenario simulasi, studi kasus, dan feedback real-time untuk mengasah keterampilan negosiasi dan penutupan penjualan tim mereka.",
+      "client_testimonial": {
+        "quote": "Hasilnya luar biasa. Keterampilan tim penjualan kami meningkat pesat setelah mengikuti pelatihan dari EduLab. Sangat direkomendasikan!",
+        "client_name": "Mr. Alex Tan",
+        "client_role": "Head of Sales, Global Corp"
+      }
+    },
+    {
+      "id": "ux-research-platform",
+      "type": "ui-ux-design",
+      "industry": "Research",
+      "title": "Platform Penelitian Pengguna UX",
+      "short_description": "Desain platform intuitif untuk melakukan penelitian pengguna, wawancara, dan analisis usability.",
+      "thumbnail_image": "https://via.placeholder.com/400x250/FFC300/000000?text=UX+Research",
+      "gallery_images": [
+        "https://via.placeholder.com/800x600/FFC300/000000?text=UX+Research+1",
+        "https://via.placeholder.com/800x600/FFC300/000000?text=UX+Research+2",
+        "https://via.placeholder.com/800x600/FFC300/000000?text=UX+Research+3"
+      ],
+      "long_description": "Kami merancang platform yang memudahkan peneliti UX untuk merencanakan, melaksanakan, dan menganalisis studi pengguna. Desainnya fokus pada alur kerja yang efisien dan visualisasi data yang jelas, memungkinkan tim untuk mendapatkan wawasan lebih cepat.",
+      "client_testimonial": {
+        "quote": "Platform yang dirancang oleh EduLab sangat membantu tim riset kami. Sekarang kami bisa mengumpulkan dan menganalisis data pengguna dengan lebih efisien.",
+        "client_name": "Ms. Chloe Chen",
+        "client_role": "Lead UX Researcher, Innovate Corp"
+      }
+    }
+  ]
+}
