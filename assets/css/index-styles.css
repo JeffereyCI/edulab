@@ -1,3 +1,6 @@
+/* assets/css/index-styles.css */
+
+/* Hero Section Parallax */
 .parallax {
     background-image: url('/assets/images/hero.jpg');
     background-attachment: fixed;
@@ -6,6 +9,80 @@
     background-size: cover;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
+/* Features/Services Section Styles */
+.service-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-details {
+    overflow: hidden;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out;
+    height: 0;
+    opacity: 0;
+}
+
+.feature-details.expanded {
+    height: auto;
+    opacity: 1;
+}
+
+/* Testimonials/Reviews Section Styles */
+.testimonial-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card {
+    flex-shrink: 0; /* Penting agar kartu tidak menyusut */
+    width: 100%; /* Setiap kartu mengambil seluruh lebar kontainer */
+}
+
+.star-rating {
+    position: relative; /* Untuk posisi absolut detail rating */
+    display: inline-flex; /* Agar span bintang berjajar */
+}
+
+.star-rating .star {
+    font-size: 2rem; /* Ukuran bintang */
+    line-height: 1;
+    color: #fbd38d; /* Warna kuning default */
+}
+
+/* Star rating detail on hover */
+.star-rating .rating-detail {
+    position: absolute;
+    bottom: calc(100% + 5px); /* Di atas bintang dengan sedikit jarak */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none; /* Agar tidak menghalangi klik di bawahnya */
+    z-index: 10;
+}
+
+.star-rating:hover .rating-detail {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styling for inactive/partial stars */
+.star.inactive {
+    color: #cbd5e0; /* Warna abu-abu untuk bintang tidak aktif */
+}
+
+/* Untuk simulasi setengah bintang, bisa pakai masking atau ikon yang berbeda */
+/* Contoh sederhana, bintang ke-5 bisa diatur gray jika rating 4.5 */
+.star-rating[data-rating="4.5"] .star:nth-child(5) {
+    color: #cbd5e0; /* Misalnya, bintang ke-5 menjadi abu-abu untuk 4.5 */
+}
+
+/* Carousel navigation dots */
+.carousel-dot.active {
+    background-color: #3b82f6; /* Warna biru untuk dot aktif */
 }

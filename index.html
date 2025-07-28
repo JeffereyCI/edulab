@@ -6,8 +6,11 @@
     <title>EduLab - Homepage</title>
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/index-styles.css">
-    </head>
+    <script src="./assets/js/navbar-loader.js"></script>
+</head>
 <body class="font-sans antialiased">
+
+    <div id="navbar-placeholder"></div>
 
     <section id="hero-section" class="min-h-screen flex flex-col justify-center items-center text-white relative overflow-hidden parallax">
         <div class="absolute inset-0 bg-black opacity-60"></div>
@@ -35,47 +38,109 @@
         </div>
     </section>
 
-    <section id="content-section" class="bg-gray-100 py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Mengapa Memilih EduLab?</h2>
+    <section id="content-section" class="bg-white py-20 px-4">
+        <div class="max-w-7xl mx-auto">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-blue-500 text-5xl mb-6 text-center">💡</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Pembelajaran Interaktif</h3>
-                    <p class="text-gray-600 text-center">Nikmati modul pembelajaran yang dirancang untuk keterlibatan maksimal, dengan kuis interaktif dan proyek nyata.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-green-500 text-5xl mb-6 text-center">👨‍🏫</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Instruktur Berpengalaman</h3>
-                    <p class="text-gray-600 text-center">Belajar dari para ahli di bidangnya yang siap membimbing Anda mencapai kesuksesan.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-purple-500 text-5xl mb-6 text-center">📈</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Jalur Karir Jelas</h3>
-                    <p class="text-gray-600 text-center">Dapatkan keterampilan yang relevan dengan industri dan terhubung dengan peluang karir.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-red-500 text-5xl mb-6 text-center">💻</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Akses Fleksibel</h3>
-                    <p class="text-gray-600 text-center">Belajar kapan saja, di mana saja, dengan perangkat apa saja. Kurikulum kami menyesuaikan jadwal Anda.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-yellow-500 text-5xl mb-6 text-center">🤝</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Komunitas Pendukung</h3>
-                    <p class="text-gray-600 text-center">Bergabunglah dengan komunitas pembelajar yang dinamis untuk berkolaborasi dan berbagi.</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <div class="text-teal-500 text-5xl mb-6 text-center">🏆</div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4 text-center">Sertifikasi Bergengsi</h3>
-                    <p class="text-gray-600 text-center">Selesaikan kursus dan dapatkan sertifikat yang diakui untuk meningkatkan profil profesional Anda.</p>
-                </div>
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Belajar & Program Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <a href="/services.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/33FF57/FFFFFF?text=Language+Abroad" alt="Language Abroad" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Belajar Bahasa di Luar Negeri</h3>
+                        <p class="text-gray-600 text-sm">Pilih dari 10 bahasa di 50 kampus Bahasa Internasional terakreditasi di seluruh dunia.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Pelajari Lebih Lanjut &rarr;</span>
+                    </div>
+                </a>
+                <a href="/services.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/FF33DA/FFFFFF?text=English+Courses" alt="English Courses" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Kursus Bahasa Inggris</h3>
+                        <p class="text-gray-600 text-sm">Belajar bahasa Inggris di AS serta Inggris Live – sekolah bahasa Inggris online terbesar di dunia.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Mulai Sekarang &rarr;</span>
+                    </div>
+                </a>
+                <a href="/services.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/33FFCE/FFFFFF?text=Boarding+School" alt="International Boarding School" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Sekolah Asrama Internasional</h3>
+                        <p class="text-gray-600 text-sm">Raih ijazah sekolah menengah atas Anda dengan tinggal bersama siswa dari seluruh dunia.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Info Lengkap &rarr;</span>
+                    </div>
+                </a>
+                <a href="/services.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/8D33FF/FFFFFF?text=University+Abroad" alt="University Abroad" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Kuliah di Luar Negeri</h3>
+                        <p class="text-gray-600 text-sm">Program persiapan universitas dan program gelar.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Jelajahi Universitas &rarr;</span>
+                    </div>
+                </a>
+                <a href="/services.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/FF8833/FFFFFF?text=Gap+Year" alt="Gap Year" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Gap Year</h3>
+                        <p class="text-gray-600 text-sm">Bepergian, belajar bahasa, berpartisipasi dalam layanan pembelajaran, dan magang di seluruh dunia untuk semester atau tahun ajaran.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Mulai Petualangan Anda &rarr;</span>
+                    </div>
+                </a>
+                <a href="/portofolio.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/33B2FF/FFFFFF?text=Portofolio+Highlight" alt="Portofolio Highlight" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Proyek Inovatif Alumni</h3>
+                        <p class="text-gray-600 text-sm">Lihat beberapa proyek terbaik yang telah diselesaikan oleh alumni kami yang berbakat.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Lihat Portofolio &rarr;</span>
+                    </div>
+                </a>
             </div>
+
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Jelajahi Alat & Aplikasi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <a href="/blog_opsional.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
+                    <img src="https://via.placeholder.com/700x400/9C27B0/FFFFFF?text=EduLab+App" alt="EduLab App" class="w-full h-auto object-cover md:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white z-10">
+                        <h3 class="text-3xl font-bold mb-2">EduLab App</h3>
+                        <p class="text-lg">Aplikasi pembelajaran bahasa pemenang penghargaan.</p>
+                    </div>
+                </a>
+                <a href="/blog_opsional.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
+                    <img src="https://via.placeholder.com/700x400/00BCD4/FFFFFF?text=EduLab+English+Test" alt="EduLab English Test" class="w-full h-auto object-cover md:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 p-6 text-white z-10">
+                        <h3 class="text-3xl font-bold mb-2">Ujian Bahasa Inggris EduLab</h3>
+                        <p class="text-lg">Sertifikat bahasa Inggris online gratis.</p>
+                    </div>
+                </a>
+            </div>
+
+            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Sorotan EduLab</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <a href="/blog_opsional.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/FFD700/FFFFFF?text=Research+Highlight" alt="Research Highlight" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Penelitian Inovatif 2024</h3>
+                        <p class="text-gray-600 text-sm">Indeks tahun ini menempatkan 116 negara dan wilayah berdasarkan data uji dari lebih dari dua juta orang dewasa.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Baca Selengkapnya &rarr;</span>
+                    </div>
+                </a>
+                <a href="/blog_opsional.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/008080/FFFFFF?text=Pro+Cycling" alt="EduLab Pro Cycling" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">EduLab Pro Cycling</h3>
+                        <p class="text-gray-600 text-sm">Tim internasional kami sedang berlomba keliling dunia di UCI WorldTour – puncak bersepeda profesional.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Lihat Berita &rarr;</span>
+                    </div>
+                </a>
+                <a href="/blog_opsional.html" class="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <img src="https://via.placeholder.com/400x250/B8860B/FFFFFF?text=First+Year+Success" alt="First Year Success" class="w-full h-48 object-cover">
+                    <div class="p-6 bg-white">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">Tahun Pertama yang Berhasil!</h3>
+                        <p class="text-gray-600 text-sm">Akademi terbaru EduLab di Pasadena, California, baru saja menyelesaikan tahun pertamanya. Bergabunglah dengan hampir 300 teman sekelas dari seluruh dunia untuk pengalaman yang mendalam dan pendidikan inovatif.</p>
+                        <span class="text-blue-500 mt-3 block text-sm font-medium">Baca Kisahnya &rarr;</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
     </section>
 

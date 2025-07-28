@@ -1,6 +1,3 @@
-// index-scripts.js
-
-// Dynamic Typing Effect
 const taglineElement = document.getElementById('tagline');
 const taglines = [
     "There's no limit to where you can go.",
@@ -11,14 +8,13 @@ let isDeleting = false;
 
 function typeEffect() {
     if (!taglineElement) {
-        return; // Exit if element not found
+        return;
     }
 
     const currentTagline = taglines[taglineIndex];
 
-    // Added logic for single tagline to prevent endless deleting/retyping
     if (taglines.length === 1 && !isDeleting && charIndex === currentTagline.length) {
-        return; // Stop if the single tagline is fully typed and not deleting
+        return;
     }
 
     if (isDeleting) {
@@ -43,11 +39,10 @@ function typeEffect() {
 
 document.addEventListener('DOMContentLoaded', typeEffect);
 
-// Interactive Statistics Counter
 function animateCounter(id, target, duration, isPercentage = false) {
     const element = document.getElementById(id);
     if (!element) {
-        return; // Exit if element not found
+        return;
     }
 
     let start = 0;
@@ -64,7 +59,6 @@ function animateCounter(id, target, duration, isPercentage = false) {
     }, 10);
 }
 
-// Trigger counters when they are in view using Intersection Observer
 const observerOptions = {
     threshold: 0.5
 };
@@ -84,8 +78,6 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, observerOptions);
 
-// Mulai mengamati elemen
-// Pastikan elemen ada sebelum mencoba mengamatinya
 const usersCountElement = document.getElementById('users-count');
 const projectsCountElement = document.getElementById('projects-count');
 const successRateElement = document.getElementById('success-rate');
@@ -95,7 +87,6 @@ if (projectsCountElement) observer.observe(projectsCountElement);
 if (successRateElement) observer.observe(successRateElement);
 
 
-// Smooth Scroll untuk Tombol CTA di Hero Section
 const heroCtaScrollButton = document.getElementById('hero-cta-scroll');
 if (heroCtaScrollButton) {
     heroCtaScrollButton.addEventListener('click', function(e) {
